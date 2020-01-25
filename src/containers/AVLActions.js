@@ -6,7 +6,7 @@ import DeviceHubSharpIcon from '@material-ui/icons/DeviceHubSharp';
 import AddCircleOutlineSharpIcon from '@material-ui/icons/AddCircleOutlineSharp';
 import RemoveCircleOutlineSharpIcon from '@material-ui/icons/RemoveCircleOutlineSharp';
 
-import Button from "@material-ui/core/Button";
+
 import IconButton from "@material-ui/core/IconButton";
 import {deleteNode, insertNode} from "../actions";
 import {connect} from "react-redux";
