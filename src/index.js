@@ -9,18 +9,27 @@ import avlApp from "./reducers";
 import {Provider} from "react-redux";
 import {insertNode} from "./actions";
 
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
+
+
 const store = createStore(avlApp);
 
-store.dispatch(insertNode(0));
-store.dispatch(insertNode(1));
-store.dispatch(insertNode(2));
-store.dispatch(insertNode(3));
-store.dispatch(insertNode(4));
-store.dispatch(insertNode(60));
+    for (let i = 0; i < 15; i++)
+        store.dispatch(insertNode(i));
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <BrowserView>
+            <App/>
+        </BrowserView>
+        <MobileView>
+            <h1>ASDSADASDSAD</h1>
+        </MobileView>
     </Provider>,
     document.getElementById('root'));
 

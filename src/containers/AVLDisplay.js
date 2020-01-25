@@ -23,6 +23,10 @@ class AVLDisplay extends React.Component{
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
+    avlHeightToWindowHeight(){
+        const avlHeight = this.props.avl.height;
+    }
+
     get value(){
         const value = document.getElementById("my-input").value;
         return parseInt(value);

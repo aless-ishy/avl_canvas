@@ -33,9 +33,9 @@ class Canvas extends React.Component {
         ctx.stroke();
     }
 
-    drawTree(ctx, tree, px, py, level, levelDistance = this.props.levelDistance, radius = this.props.radius, w = 900) {
+    drawTree(ctx, tree, px, py, level, levelDistance = this.props.levelDistance, radius = this.props.radius, w = this.props.width*0.5) {
         this.drawNode(ctx, px, py, radius);
-        this.writeInfo(ctx, tree.height, tree.value, px, py);
+        this.writeInfo(ctx, tree.balanceFactor, tree.value, px, py);
 
         if(tree.left != null ){
             let p1x = px - w*Math.pow(2,-(level+1));
@@ -60,7 +60,7 @@ class Canvas extends React.Component {
         ctx.clearRect(0,0,this.props.width, this.props.height);
 
         if(tree != null)
-            this.drawTree(ctx, tree, 450, 150, 1);
+            this.drawTree(ctx, tree, this.props.width*0.5, 150, 1);
 
     }
 
