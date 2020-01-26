@@ -60,7 +60,7 @@ class Canvas extends React.Component {
         ctx.clearRect(0,0,this.props.width, this.props.height);
 
         if(tree != null)
-            this.drawTree(ctx, tree, this.props.width*0.5, 150, 1);
+            this.drawTree(ctx, tree, this.props.width*0.5, this.props.radius*2, 1);
 
     }
 

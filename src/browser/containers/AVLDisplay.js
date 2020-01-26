@@ -62,9 +62,9 @@ class AVLDisplay extends React.Component {
 
     render() {
         return (
-            <div style={{maxHeight: (this.state.height - 70) + "px", maxWidth: this.state.width + "px", overflow: "auto"}}>
+            <div style={{maxHeight: (this.state.height - 70 ) + "px", maxWidth: this.state.width + "px", overflow: "auto"}}>
                 <Canvas avl={this.props.avl} radius={this.state.canvas.radius} levelDistance={this.state.canvas.levelDistance} width={this.state.canvas.width}
-                        height={this.state.canvas.height > this.state.height - 70 ? this.state.canvas.height : this.state.height - 70}/>
+                        height={this.state.canvas.height > this.state.height - 70 ? this.state.canvas.height : this.state.height - 80}/>
             </div>
         );
     }
