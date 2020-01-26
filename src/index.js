@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/index.css';
-import App from './components/App';
+import App from './browser/components/App';
 import * as serviceWorker from './serviceWorker';
 
 import {createStore} from "redux";
@@ -15,11 +15,12 @@ import {
     isBrowser,
     isMobile
 } from "react-device-detect";
+import AppMobile from "./mobile/components/AppMobile";
 
 
 const store = createStore(avlApp);
 
-    for (let i = 0; i < 15; i++)
+    for (let i = 0; i < 10; i++)
         store.dispatch(insertNode(i));
 
 ReactDOM.render(
@@ -28,7 +29,7 @@ ReactDOM.render(
             <App/>
         </BrowserView>
         <MobileView>
-            <h1>ASDSADASDSAD</h1>
+            <App/>
         </MobileView>
     </Provider>,
     document.getElementById('root'));

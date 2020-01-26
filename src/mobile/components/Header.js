@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import {fade, InputBase} from "@material-ui/core";
 import AVLActions from "../containers/AVLActions";
-import {deleteNode, insertNode} from "../actions";
+import {deleteNode, insertNode} from "../../actions";
 import {connect} from "react-redux";
 
 const useStyles = makeStyles(theme => ({

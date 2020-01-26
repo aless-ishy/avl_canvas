@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import React, {useState} from "react";
-import Canvas from "../components/Canvas";
+import Canvas from "../../browser/components/Canvas";
 
 
 class AVLDisplay extends React.Component{
@@ -34,7 +34,7 @@ class AVLDisplay extends React.Component{
 
     render() {
         return (
-            <div>
+            <div style="max-height: 256px;max-width:256px;overflow: scroll;">
                 <Canvas avl={this.props.avl} radius={40} levelDistance={100} width={this.state.width} height={600}/>
             </div>
         );

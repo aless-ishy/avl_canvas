@@ -8,7 +8,7 @@ import RemoveCircleOutlineSharpIcon from '@material-ui/icons/RemoveCircleOutline
 
 
 import IconButton from "@material-ui/core/IconButton";
-import {deleteNode, insertNode} from "../actions";
+import {deleteNode, insertNode} from "../../actions";
 import {connect} from "react-redux";
 
 const styles = (theme) => ({
@@ -42,8 +42,8 @@ const styles = (theme) => ({
         '&:hover': {
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        marginRight: theme.spacing(2),
-        marginLeft: 0,
+        marginRight: '40%',
+        marginLeft: '0%',
         width: '100%',
         [theme.breakpoints.up('sm')]: {
             marginLeft: theme.spacing(3),
