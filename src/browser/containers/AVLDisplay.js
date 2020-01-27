@@ -36,8 +36,8 @@ class AVLDisplay extends React.Component {
         const hp = window.innerHeight/1200;
         const p = Math.sqrt(wp*hp);
 
-        const levelDistance = 150 * hp;
-        const radius = 40 * p;
+        const levelDistance = 160 * hp;
+        const radius = 50 * p;
         const width = Math.pow(2, avl.height) * radius * 5;
         const height = ((avl.height + 1) * levelDistance + (avl.height)*radius);
 
