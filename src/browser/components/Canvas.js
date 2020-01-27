@@ -18,7 +18,7 @@ class Canvas extends React.Component {
 
     writeInfo(ctx, balanceFactor, value, px, py, radius = this.props.radius) {
         ctx.textAlign = "center";
-        ctx.font = "20px Arial";
+        ctx.font =  Math.round(radius * 0.025 * 20) + "px Arial";
         ctx.fillText(value, px, py);
 
         ctx.fillText(balanceFactor, px - Math.sqrt(2) * 0.5 * radius - 0.3 * radius, py - Math.sqrt(2) * 0.5 * radius);
